@@ -4,8 +4,7 @@ const min = document.getElementById('min');
 const sec = document.getElementById('sec');
 
 let audio = document.getElementById('tick-tick');
-let resp = audio.play();
-audiofixed(resp);
+let resp;
 
 setInterval(() => {   
     
@@ -36,15 +35,11 @@ function audioloop (audio) {
         }, false);
     }
     resp = audio.play();   
-    audiofixed(resp);
-}
-
-function audiofixed(resp) {
     if (resp!== undefined) {
         resp.then(_ => {
             // autoplay starts!
         }).catch(error => {
         //show error
         });
-    }
+    }   
 }
