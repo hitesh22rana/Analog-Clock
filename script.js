@@ -6,6 +6,11 @@ const sec = document.getElementById('sec');
 let audio = document.getElementById('tick-tick');
 let resp;
 
+function toggle() {
+    const body = document.querySelector('body');
+    body.classList.toggle('light');
+};
+
 setInterval(() => {   
     
     let day = new Date();
